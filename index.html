@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kolommen sorteren</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+        }
+
+        #sortable li {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            height: 1.5em;
+            background-color: lightgray;
+            border-style: solid;
+        }
+
+        html>body #sortable li {
+            height: 1.5em;
+            line-height: 1.2em;
+            background-color: lightgray;
+            border-style: solid;
+        }
+
+        .ui-state-highlight {
+            height: 1.5em;
+            line-height: 1.2em;
+            background-color: lightgray;
+            border-style: solid;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#sortable").sortable({
+                placeholder: "ui-state-highlight"
+            });
+            $("#sortable").disableSelection();
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Kolommen kunnen met de muis worden verplaatst</h2>
+    <p>dit m.b.v linkermuisknop indrukken en verplaatsen naar een andere kolom.</p>
+    <br>
+    <ul id="sortable">
+        <li class="ui-state-default">Kolom 1</li>
+        <li class="ui-state-default">Kolom 2</li>
+        <li class="ui-state-default">Kolom 3</li>
+        <li class="ui-state-default">Kolom 4</li>
+        <li class="ui-state-default">Kolom 5</li>
+        <li class="ui-state-default">Kolom 6</li>
+        <li class="ui-state-default">Kolom 7</li>
+    </ul>
+</body>
+
+</html>
